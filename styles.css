@@ -69,36 +69,56 @@ a:hover { text-decoration: underline; }
 .sidebar h2 { font-size: 19px; margin: 0 0 2px; color: #3f454a; }
 .pronouns { margin: 0 0 14px; color: #68717a; }
 .bio { font-size: 15px; margin: 0 0 18px; color: #4f5960; }
-.side-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; }
-.side-list li { display: flex; gap: 11px; align-items: center; color: #424a50; font-size: 15px; }
-.side-list a { color: #424a50; }
-.side-list a:hover { color: var(--green); }
+.side-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 11px;
+}
+.side-list li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  column-gap: 10px;
+  color: #424a50;
+  font-size: 15px;
+  line-height: 1.35;
+}
+.side-list a {
+  color: #424a50;
+  font-weight: 400;
+}
+.side-list a:hover {
+  color: var(--green);
+  text-decoration: none;
+}
 .icon {
-  width: 21px;
-  height: 21px;
-  border-radius: 5px;
+  width: 18px;
+  height: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 21px;
-  font-size: 12px;
-  font-weight: 800;
+  flex: 0 0 18px;
+  color: #4a4f57;
+  background: transparent;
+  border-radius: 0;
+  font-size: 15px;
+  font-weight: 700;
   line-height: 1;
-  color: #fff;
-  background: #4b5563;
   font-family: Arial, sans-serif;
 }
-.icon.location { background: #4b5563; }
-.icon.university { background: #4b5563; }
-.icon.website { background: #0f766e; }
-.icon.email { background: #4b5563; }
-.icon.scholar { background: #6b7280; font-family: Georgia, serif; }
-.icon.github { background: #24292f; }
-.icon.linkedin { background: #0a66c2; }
-.icon.scopus { background: #4b5563; font-size: 10px; }
-.icon.wos { background: #7c3aed; font-size: 10px; }
-.icon.youtube { background: #ff0000; }
-.icon.orcid { background: #a6ce39; font-size: 11px; }
+.icon.location { color: #4a4f57; }
+.icon.university { color: #4a4f57; }
+.icon.website { color: #4a4f57; }
+.icon.email { color: #4a4f57; }
+.icon.scholar { color: #4a4f57; font-family: Georgia, serif; font-size: 16px; }
+.icon.scopus { color: #4a4f57; font-size: 11px; font-weight: 800; }
+.icon.wos { color: #4a4f57; font-size: 13px; }
+.icon.github { color: #111827; font-size: 12px; font-weight: 800; }
+.icon.linkedin { color: #0a66c2; font-size: 12px; font-weight: 800; }
+.icon.youtube { color: #ff0000; }
+.icon.orcid { color: #a6ce39; font-size: 12px; }
 
 .main h1 {
   margin: 0 0 18px;
@@ -207,11 +227,3 @@ footer { border-top: 1px solid #ededed; text-align: center; padding: 26px; color
 .publication-item p { margin: 0 0 12px; color: var(--muted); }
 .pub-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
 .pub-links a { display: inline-block; padding: 7px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--soft); color: var(--green); font-weight: 700; font-size: 14px; }
-
-
-/* Profile-link brand colors */
-.side-list li.github-row a { color: #24292f; font-weight: 600; }
-.side-list li.linkedin-row a { color: #0a66c2; font-weight: 600; }
-.side-list li.scholar-row a,
-.side-list li.scopus-row a,
-.side-list li.wos-row a { font-weight: 600; }
